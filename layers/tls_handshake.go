@@ -119,6 +119,22 @@ func (m *TLSCertificate) String() string {
 	return fmt.Sprintf("Certificate: Certificates=%d", len(m.Certificates))
 }
 
+const (
+	TLSExtensionServerName          uint16 = 0
+	TLSExtensionStatusRequest       uint16 = 5
+	TLSExtensionSupportedCurves     uint16 = 10
+	TLSExtensionSupportedPoints     uint16 = 11
+	TLSExtensionSignatureAlgorithms uint16 = 13
+	TLSExtensionALPN                uint16 = 16
+	TLSExtensionSCT                 uint16 = 18
+	TLSExtensionSessionTicket       uint16 = 35
+	TLSExtensionPreSharedKey        uint16 = 41
+	TLSExtensionEarlyData           uint16 = 42
+	TLSExtensionSupportedVersions   uint16 = 43
+	TLSExtensionPSKKeyExchangeModes uint16 = 45
+	TLSExtensionKeyShare            uint16 = 51
+)
+
 // TLSExtension 定义 TLS 扩展结构
 type TLSExtension struct {
 	Type uint16
